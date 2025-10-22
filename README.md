@@ -1,1 +1,1 @@
-# detect-vpn
+# cordova-outsystems-vpndetection

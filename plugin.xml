@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com-outsystems-vpndetection" version="1.0.0"
+    xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>VPNDetection Plugin</name>
+
+    <js-module name="VPNDetection" src="www/VPNDetection.js">
+        <clobbers target="VPNDetection" />
+    </js-module>
+
+    <platform name="ios">
+
+        <config-file parent="/*" target="config.xml">
+            <feature name="VPNDetectionPlugin">
+                <param name="ios-package" value="VPNDetectionPlugin" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/ios/VPNDetectionPlugin.m" />
+
+    </platform>
+
+    <platform name="android">
+    
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="VPNDetectionPlugin">
+                <param name="android-package" value="com.outsystems.vpndetection.VPNDetectionPlugin" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/VPNDetectionPlugin.java" target-dir="src/com/outsystems/vpndetection" />
+
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+        </config-file>
+
+
+    </platform>
+</plugin>

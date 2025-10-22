@@ -1,0 +1,14 @@
+{
+  "name": "vpndetectionplugin",
+  "version": "1.0.0",
+  "description": "",
+  "cordova": {
+    "id": "com-outsystems-vpndetection",
+    "platforms": []
+  },
+  "keywords": [
+    "ecosystem:cordova"
+  ],
+  "author": "",
+  "license": "ISC"
+}
